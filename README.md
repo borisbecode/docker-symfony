@@ -35,3 +35,29 @@ docker stop www_docker_symfony && docker stop maildev_docker_symfony && docker s
 [youtube de l'environnement](https://www.youtube.com/watch?v=tRI6KFNKfFo)
 
 [cours nouvelle techno](https://www.youtube.com/watch?v=DBHs5iqxIPQ&list=PLBq3aRiVuwyyqbgym6fZcPSptUSmg9pkL)
+
+## ligne utile
+
+pour rentrer des commandes dans doctrine
+
+```bash
+docker exec -it www_docker_symfony bash
+```
+
+41min46
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```

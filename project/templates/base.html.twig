@@ -3,17 +3,42 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+      <!-- Axentix CSS minified version -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@2.0.0/dist/axentix.min.css">
+
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
+<!-- Axentix JS minified version -->
+<script src="https://cdn.jsdelivr.net/npm/axentix@2.0.0/dist/axentix.min.js"></script>
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
     </head>
     <body>
-        {% block body %}{% endblock %}
+    <header>
+      <nav class="navbar shadow-1 primary">
+        <a href="{{path('app_home')}}"  class="navbar-brand">Axentix</a>
+        <div class="navbar-menu ml-auto">
+          <a class="navbar-link" href="#">Link 1</a>
+          <a class="navbar-link" href="#">Link 2</a>
+          <a class="navbar-link" href="#">Link 3</a>
+          <a class="navbar-link" href="#">Link 4</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      {% block body %}{% endblock %}
+    </main>
+
+    <footer class="footer primary">
+      Copyright © 2022 - Example
+    </footer>
+      
     </body>
 </html>
